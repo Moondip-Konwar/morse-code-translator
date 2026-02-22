@@ -8,7 +8,8 @@ const config = {
       fallback: "404.html", // SPA fallback (important)
     }),
     paths: {
-      base: process.env.NODE_ENV === "production" ? "/REPO_NAME" : "",
+      base:
+        process.env.NODE_ENV === "production" ? "/morse-code-translator" : "",
     },
   },
 };
