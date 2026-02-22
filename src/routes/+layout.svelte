@@ -20,7 +20,9 @@
 	<!-- Nav Items -->
 	<div id="nav-items" class="flex flex-row gap-3">
 		<a href="#about">About</a>
-		<a href="">Github</a>
+		<a href="https://www.github.com/Moondip-Konwar/morse-code-translator"
+			>Github</a
+		>
 	</div>
 </nav>
 {@render children()}
