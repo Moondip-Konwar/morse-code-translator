@@ -47,12 +47,17 @@
     output_text = "";
 
     for (let c = 0; c < input_text.length; c++) {
-      output_text += morse_map[input_text[c].toUpperCase()];
+      let char = input_text[c].toUpperCase();
+      if (!Object.keys(morse_map).includes(char)) {
+        output_text = "Invalid character: " + char;
+        break;
+      }
+      output_text += morse_map[char];
     }
   }
 </script>
 
-<main class="p-4 flex flex-col gap-8">
+<main class="p-16 flex flex-col gap-8">
   <!-- Input  -->
   <form action="" class="flex flex-col gap-2" onsubmit={handle_submit}>
     <label for="input" class="font-bold"
@@ -65,7 +70,11 @@
       placeholder="Enter something to get started..."
       bind:value={input_text}
     ></textarea>
-    <button type="submit">Convert</button>
+    <button
+      type="submit"
+      class="bg-black text-white hover:text-black hover:bg-white hover:border-black border max-w-[10ch] rounded-lg"
+      >Convert</button
+    >
   </form>
 
   <!-- Output -->
