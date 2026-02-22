@@ -44,6 +44,10 @@
 
   function handle_submit(event: SubmitEvent) {
     event.preventDefault();
+    convert_to_morse();
+  }
+
+  function convert_to_morse() {
     output_text = "";
 
     for (let c = 0; c < input_text.length; c++) {
@@ -60,9 +64,7 @@
 <main class="p-16 flex flex-col gap-8">
   <!-- Input  -->
   <form action="" class="flex flex-col gap-2" onsubmit={handle_submit}>
-    <label for="input" class="font-bold"
-      >Enter text or Morse code (separated by spaces):</label
-    >
+    <label for="input" class="font-bold">Enter text (no punctuation):</label>
     <textarea
       name=""
       id="input"
