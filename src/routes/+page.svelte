@@ -18,8 +18,9 @@
     <textarea
       name=""
       id="output"
-      class="border border-gray-800 h-[5rem] p-2 rounded-lg w-full disabled"
+      class="border border-gray-400 h-[5rem] p-2 rounded-lg w-full disabled"
       placeholder="Enter something to get started..."
+      disabled
     ></textarea>
   </div>
 </main>
